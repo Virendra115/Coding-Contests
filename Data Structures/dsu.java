@@ -16,4 +16,12 @@ class DSU {
         int fy = find(y);
         dsu[fx] = fy;
     }
+    public int count() {
+        int ans = 0;
+        for (int i = 1; i < dsu.length; i++) {
+            if (dsu[i] == i)
+                ans++;
+        }
+        return ans;
+    }
 }
