@@ -21,32 +21,7 @@ public class Template {
     static <E> void print(E res) {
         System.out.println(res);
     }
-    
-    long binpow(long a, long b) {
-        if (b == 0)
-            return 1;
-        long res = binpow(a, b / 2);
-        if (b % 2==1)
-            return res * res * a;
-        else
-            return res * res;
-    }
-    
-    static List<Integer> sieve(int n) {
-        List<Integer> prime = new ArrayList<>();
-        boolean[] f = new boolean[n];
-        Arrays.fill(f, true);
-        for (int i = 2; i <= n; i++) {
-            if (f[i]) {
-                prime.add(i);
-                for (int j = 2*i; j <= n; j+=i) {
-                    f[j] = false;
-                }
-            }
-        }
-        return prime;
-    }
-    
+        
     static void sort(int[] arr) {
         ArrayList<Integer> ls = new ArrayList<Integer>();
         for(int x: arr)
